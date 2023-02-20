@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../src/index.ts"],
-  "sourcesContent": ["const init = () => {\n    console.log('loaded')\n}\n\ndocument.addEventListener(\"DOMContentLoaded\", init)"],
-  "mappings": "MAAA,IAAMA,EAAO,IAAM,CACf,QAAQ,IAAI,QAAQ,CACxB,EAEA,SAAS,iBAAiB,mBAAoBA,CAAI",
-  "names": ["init"]
+  "sourcesContent": ["const init = () => {\n  console.log(\"hi jon\");\n  const links = document.querySelectorAll<HTMLAnchorElement>('a[href$=\"[nf]\"]');\n\n  links.forEach((link) => {\n    link.href = link.href.replace(\"[nf]\", \"\");\n    link.setAttribute(\"rel\", \"nofollow\");\n  });\n};\n\ndocument.addEventListener(\"DOMContentLoaded\", init);\n"],
+  "mappings": "MAAA,IAAMA,EAAO,IAAM,CACjB,QAAQ,IAAI,QAAQ,EACN,SAAS,iBAAoC,iBAAiB,EAEtE,QAASC,GAAS,CACtBA,EAAK,KAAOA,EAAK,KAAK,QAAQ,OAAQ,EAAE,EACxCA,EAAK,aAAa,MAAO,UAAU,CACrC,CAAC,CACH,EAEA,SAAS,iBAAiB,mBAAoBD,CAAI",
+  "names": ["init", "link"]
 }
